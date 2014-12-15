@@ -1,5 +1,7 @@
 var React = require('react');
 
+var SpeedMeter = require('../components/SpeedMeter');
+
 var Alert = require('react-bootstrap').Alert;
 var ButtonToolbar = require('react-bootstrap').ButtonToolbar;
 var Button = require('react-bootstrap').Button;
@@ -32,6 +34,7 @@ var TickTock = React.createClass({
     },
     componentDidMount: function() {
         this.setInterval(this.tick, 1000); // Call a method on the mixin
+
     },
     tick: function() {
         this.setState({seconds: this.state.seconds + 1});
@@ -90,7 +93,7 @@ var TickTock = React.createClass({
                 </p>
 
 
-
+                <div id="SpeedMeter"></div>
                 <Jumbotron>
                     <h1>React Timer {this.props.pippo}</h1>
                     <Panel header="React Timer" bsStyle="primary">

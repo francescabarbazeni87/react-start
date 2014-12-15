@@ -7,8 +7,10 @@ var Router = require("react-router");
 var Route = Router.Route;
 var NotFoundRoute = Router.NotFoundRoute;
 
+
 // Handlers
-var App = React.createFactory(require('../pages/Demo'));
+//var App = React.createFactory(require('../pages/Demo'));
+var App = React.createFactory(require('../pages/ChartPage'));
 var NotFoundHandler = React.createFactory(require('../pages/NotFound'));
 
 //var ListSurveys = React.createFactory(require('./components/list_surveys'));
