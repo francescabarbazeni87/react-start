@@ -5,7 +5,7 @@
   "repository": "https://github.com/marcorigodanzo/react-start",
   "main": "src/App.js",
   "scripts": {
-    "start": "watchify -o js/bundle.js -v -d .",
+    
     "build": "browserify --debug src/App.js > dist/bundle.js",
     "build-dist": "set NODE_ENV=production&& browserify src/App.js | uglifyjs -cm > dist/bundle.min.js",
     "build-dist-linux": "NODE_ENV=production browserify src/App.js | uglifyjs -cm > dist/bundle.min.js",

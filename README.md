@@ -9,6 +9,10 @@
 
 ## Build
 
+Per installare:
+
+    npm install
+
 Per lanciare una compilazione spot:
 
     npm run build
