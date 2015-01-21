@@ -12,24 +12,24 @@ require('es5-shim/es5-sham');
 
 var React = require('react/addons');
 
-//var Router = require("react-router");
-//var app_router = require('./router/AppRouter');
-//
+var Router = require("react-router");
+var app_router = require('./router/AppRouter');
+
 
 //allow react dev tools work
 window.React = React;
 
 
-var ChartPage = require('./pages/ChartPage');
+//var ChartPage = require('./pages/ChartPage');
 
 
-React.render(
-    <ChartPage pippo="pluto"></ChartPage>,
-    document.body
-);
+//React.render(
+//    <ChartPage pippo="pluto"></ChartPage>,
+//    document.body
+//);
 
 
 
-//Router.run(app_router, function (Handler) {
-//    React.render(<Handler/>, document.body);
-//});
+Router.run(app_router, function (Handler) {
+    React.render(<Handler/>, document.body);
+});

@@ -129,6 +129,7 @@ var PieChart = React.createClass({
             </div>
             );
     },
+
     componentDidMount: function() {
         var dom =  this.getDOMNode();
         createChart(dom, this.props);
