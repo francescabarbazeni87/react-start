@@ -10,26 +10,58 @@
 require('es5-shim/es5-shim');
 require('es5-shim/es5-sham');
 
-var React = require('react/addons');
+var React = require('react'),
+    mui = require('material-ui'),
+    RaisedButton = mui.RaisedButton,
+    FloatingActionButton = mui.FloatingActionButton,
+    IconButton = mui.IconButton,
+    FlatButton = mui.FlatButton,
+    Checkbox = mui.Checkbox,
+    Icon = mui.Icon,
+    Paper = mui.Paper;
 
-var Router = require("react-router");
-var app_router = require('./router/AppRouter');
 
+//var React = require('react/addons');
 
-//allow react dev tools work
-window.React = React;
+//
+//var Router = require("react-router");
+//var app_router = require('./router/AppRouter');
+//
+//
+////allow react dev tools work
+//window.React = React;
 
+//Needed for onTouchTap
+//Can go away when react 1.0 release
+//Check this repo:
+//https://github.com/zilverline/react-tap-event-plugin
+var injectTapEventPlugin = require("react-tap-event-plugin");
+injectTapEventPlugin();
 
 //var ChartPage = require('./pages/ChartPage');
 
 
-//React.render(
-//    <ChartPage pippo="pluto"></ChartPage>,
-//    document.body
-//);
+var SomeAwesomeComponent = React.createClass({
 
 
+    render: function() {
+        return (
 
-Router.run(app_router, function (Handler) {
-    React.render(<Handler/>, document.body);
+                    <FloatingActionButton icon="action-grade" />
+                    
+            );
+    }
+
 });
+
+
+React.render(
+    <SomeAwesomeComponent />,
+    document.body
+);
+
+//
+//
+//Router.run(app_router, function (Handler) {
+//    React.render(<Handler/>, document.body);
+//});

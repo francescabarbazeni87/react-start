@@ -2,6 +2,7 @@
 
 # compiled output
 /dist/bundle.js
+/dist/bundle.min.js
 /tmp
 
 # dependencies
